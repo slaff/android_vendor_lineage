@@ -354,6 +354,23 @@ camera_parameter_library {
     },
 }
 
+soong_config_module_type {
+    name: "egl_display_array",
+    module_type: "cc_defaults",
+    config_namespace: "lineageGlobalVars",
+    bool_variables: ["uses_egl_display_array"],
+    properties: ["cflags"],
+}
+
+egl_display_array {
+    name: "egl_display_array_defaults",
+    soong_config_variables: {
+        uses_egl_display_array: {
+            cflags: ["-DEGL_DISPLAY_ARRAY"],
+        },
+    },
+}
+
 // NVIDIA specific config modules
 soong_config_module_type {
     name: "nvidia_enhancements",
@@ -386,27 +403,6 @@ librmnetctl_pre_uplink {
     soong_config_variables: {
         uses_pre_uplink_features_netmgrd: {
             cflags: ["-DNO_UPLINK_FEATURES"],
-        },
-    },
-}
-
-soong_config_module_type {
-    name: "qti_camera_device",
-    module_type: "cc_defaults",
-    config_namespace: "lineageQcomVars",
-    bool_variables: ["uses_qti_camera_device"],
-    properties: [
-        "cppflags",
-        "shared_libs",
-    ],
-}
-
-qti_camera_device {
-    name: "qti_camera_device_defaults",
-    soong_config_variables: {
-        uses_qti_camera_device: {
-            cppflags: ["-DQTI_CAMERA_DEVICE"],
-            shared_libs: ["vendor.qti.hardware.camera.device@1.0"],
         },
     },
 }
