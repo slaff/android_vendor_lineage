@@ -45,7 +45,9 @@ SOONG_CONFIG_lineageNvidiaVars += \
 SOONG_CONFIG_NAMESPACES += lineageQcomVars
 SOONG_CONFIG_lineageQcomVars += \
     supports_extended_compress_format \
-    uses_pre_uplink_features_netmgrd
+    uses_pre_uplink_features_netmgrd \
+    uses_qcom_bsp_legacy \
+    uses_qti_camera_device
 
 # Only create display_headers_namespace var if dealing with UM platforms to avoid breaking build for all other platforms
 ifneq ($(filter $(UM_PLATFORMS),$(TARGET_BOARD_PLATFORM)),)

@@ -170,7 +170,7 @@ endif
 PRODUCT_PACKAGES += \
     adb_root \
     su
- 
+
 # SystemUI
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SystemUI
