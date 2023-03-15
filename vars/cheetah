@@ -1,4 +1,4 @@
-# Pixel 6
+# Pixel 7 Pro
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
@@ -15,7 +15,8 @@ readonly firmware_partitions=(
 
 # Usage: ${device_repos[@]}
 device_repos=(
-  # common repos in raven
+  device/google/gs201
+  device/google/pantah
 )
 
 # Need OTA zip for firmware, not supported by image_unpacker yet
@@ -34,12 +35,12 @@ readonly aosp_tag="android-13.0.0_r30"
 readonly prev_build_number="9325679"
 readonly build_number="9471150"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/oriole-tq1a.230205.002-factory-f6f5ac27.zip"
-readonly image_sha256="f6f5ac27649f1e18095cd89e5bac8e5af8e43a6bbdeb582876848116d13da596"
+readonly image_url="https://dl.google.com/dl/android/aosp/cheetah-tq1a.230205.002-factory-4439927e.zip"
+readonly image_sha256="4439927e14a29c71499ed7796756b7197e76096c197c7f43634638ccea89e237"
 
-readonly flash_url="https://flash.android.com/build/9471150?target=oriole-user&signed"
+readonly flash_url="https://flash.android.com/build/9471150?target=cheetah-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/oriole-ota-tq1a.230205.002-78790641.zip"
-readonly ota_sha256="78790641c2b620136ae9e50cedbd143df2fc0be66f6a4b0211da62c360d4a5f7"
+readonly ota_url="https://dl.google.com/dl/android/aosp/cheetah-ota-tq1a.230205.002-ad27a6d7.zip"
+readonly ota_sha256="ad27a6d7ca78c0d3fb7f51864cc6a9e6bc91f536f9e9bab5da06253df602525f"
 
 readonly security_patch="2023-02-05"

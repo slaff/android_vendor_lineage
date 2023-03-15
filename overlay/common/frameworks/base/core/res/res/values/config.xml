@@ -77,9 +77,6 @@
     <!--  Maximum number of supported users -->
     <integer name="config_multiuserMaximumUsers">4</integer>
 
-    <!-- Flag indicating which package name can access the persistent data partition -->
-    <string name="config_persistentDataPackageName" translatable="false">com.google.android.gms</string>
-
    <!-- Set icon mask to circle -->
    <string name="config_icon_mask" translatable="false">"M50 0A50 50,0,1,1,50 100A50 50,0,1,1,50 0"</string>
 
@@ -93,13 +90,6 @@
 
     <!-- Whether or not we should show the option to show battery percentage -->
     <bool name="config_battery_percentage_setting_available">false</bool>
-
-    <!-- The package name for the default wellbeing app.
-         This package must be trusted, as it has the permissions to control other applications
-         on the device.
-         Example: "com.android.wellbeing"
-     -->
-    <string name="config_defaultWellbeingPackage">com.google.android.apps.wellbeing</string>
 
     <!-- List of packages that can use the Conversation space for their category messages
     notifications until they target R -->
@@ -163,4 +153,28 @@
              2 - MODE_NIGHT_YES
     -->
     <integer name="config_defaultNightMode">2</integer>
+
+    <!-- Boolean indicating whether the HWC setColorTransform function can be performed efficiently
+         in hardware. -->
+    <bool name="config_setColorTransformAccelerated">true</bool>
+
+    <!-- The default value used for RawContacts.ACCOUNT_NAME when contacts are inserted without this
+         column set. These contacts are stored locally on the device and will not be removed even
+         if no android.account.Account with this name exists. A null string will be used if the
+         value is left empty. When this is non-empty then config_rawContactsLocalAccountType
+         should also be non-empty.  -->
+    <string name="config_rawContactsLocalAccountName" translatable="false">DEVICE</string>
+
+    <!-- The default value used for RawContacts.ACCOUNT_TYPE when contacts are inserted without this
+         column set. These contacts are stored locally on the device and will not be removed even
+         if no android.account.Account with this type exists. A null string will be used if the
+         value is left empty.  When this is non-empty then config_rawContactsLocalAccountName
+         should also be non-empty.-->
+    <string name="config_rawContactsLocalAccountType" translatable="false">com.android.contacts</string>
+
+    <!-- Default component for QR code scanner -->
+    <string name="config_defaultQrCodeComponent" translatable="false">org.lineageos.aperture/.QrScannerActivity</string>
+
+    <!-- Name of the font family to use in the default lockscreen clock -->
+    <string name="config_clockFontFamily" translatable="false" />
 </resources>

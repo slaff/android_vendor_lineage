@@ -1,4 +1,4 @@
-# Pixel 6a
+# Pixel 7
 
 # Usage: ${firmware_partitions[@]}
 readonly firmware_partitions=(
@@ -15,7 +15,7 @@ readonly firmware_partitions=(
 
 # Usage: ${device_repos[@]}
 device_repos=(
-  device/google/bluejay
+  # common repos in cheetah
 )
 
 # Need OTA zip for firmware, not supported by image_unpacker yet
@@ -34,12 +34,12 @@ readonly aosp_tag="android-13.0.0_r30"
 readonly prev_build_number="9325585"
 readonly build_number="9471150"
 
-readonly image_url="https://dl.google.com/dl/android/aosp/bluejay-tq1a.230205.002-factory-1b04ccc9.zip"
-readonly image_sha256="1b04ccc96962f6e9fbf2ba37925ff3cf771e41a5369697c618b21252d63f88db"
+readonly image_url="https://dl.google.com/dl/android/aosp/panther-tq1a.230205.002-factory-d504ff3a.zip"
+readonly image_sha256="d504ff3a0aa586e6f1dbab904b597d6441c9e83a864673b359ce0d00163f586e"
 
-readonly flash_url="https://flash.android.com/build/9471150?target=bluejay-user&signed"
+readonly flash_url="https://flash.android.com/build/9471150?target=panther-user&signed"
 
-readonly ota_url="https://dl.google.com/dl/android/aosp/bluejay-ota-tq1a.230205.002-1ec64b58.zip"
-readonly ota_sha256="1ec64b589cba8d9687ea8f85cf6c2e5d09c9e4fbdae15417aa06d5ba976fbe79"
+readonly ota_url="https://dl.google.com/dl/android/aosp/panther-ota-tq1a.230205.002-23dcb575.zip"
+readonly ota_sha256="23dcb57551646c9436dec2a895cc489088cd75520a4b769bec3e63f971472a5b"
 
 readonly security_patch="2023-02-05"
